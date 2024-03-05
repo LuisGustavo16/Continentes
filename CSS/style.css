@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+ }
+
+.navegacao {
+    display: flex;
+}
+
+.caixa {
+    height: 10rem;
+    width: 12rem;
+    border: 0.1rem solid black;
+    margin-left: 5rem;
+    border-radius: 1rem;
+    background-color: antiquewhite;
+    text-align: center;
+}
