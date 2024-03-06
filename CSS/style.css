@@ -18,3 +18,84 @@
     background-color: antiquewhite;
     text-align: center;
 }
+
+table {
+    background-color: azure;
+    width: 30rem;
+    border: 0.1rem solid black;
+}
+
+th {
+    text-align: left;
+    width: 12rem;
+    font-size: 2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+td {
+    text-align: left;
+    font-size: 1.3rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    background-color: rgb(209, 205, 202);
+    height: 100%;
+    width: 100%;
+}
+
+.inicio {
+    font-size: 4rem;
+    color: white;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.inicio:hover {
+    color: rgb(69, 160, 160);
+}
+
+.header {
+    width: 100%;
+    height: 4rem;
+    background-color: black;
+}
+
+.tabela {
+    padding: 5rem;
+}
+
+form {
+    border: 0.1rem solid black;
+    width: 20rem;
+    padding: 1rem;
+    background-color: azure;
+}
+
+label {
+    font-size: 1.4rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+input {
+    font-size: 1.01rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 2rem;
+    width: 10rem;
+    border-radius: 4rem;
+    padding-left: 10px;
+}
+
+select {
+    font-size: 1.01rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 2rem;
+    width: 10rem;
+    border-radius: 4rem;
+}
+
+button {
+    height: 3rem;
+    width: 6rem;
+    border-radius: 5rem;
+}
