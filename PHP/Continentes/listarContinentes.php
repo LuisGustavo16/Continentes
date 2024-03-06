@@ -34,13 +34,10 @@ $stmt->execute();
             <tbody>
                 <?php while ($continentes = $stmt->fetch(PDO::FETCH_ASSOC)): ?>
                     <tr>
-                        <td scope="row">
-                            <?php echo $continentes['id'] ?>
-                        </td>
-                        
-                        <td>
-                            <?php echo $continentes['nome'] ?>
-                        <td>
+                        <td> <?php echo $continentes['id'] ?> </td>
+                        <td> <?php echo $continentes['nome'] ?><td>
+                        <td><a href="deleteContinente.php?id=<?php echo $continentes['id'] ?>" onclick="return confirm('Tem certeza de que deseja remover?');">Remover</a></td>
+
                     </tr>
                 <?php endwhile; ?>
             </tbody>

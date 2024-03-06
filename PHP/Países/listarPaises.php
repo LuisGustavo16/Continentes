@@ -36,7 +36,7 @@
                     <td><?php echo $paises['nome'] ?></td>
                     <td><?php echo $paises['id_continente'] ?></td>
                     <td><a href="deletePais.php?id=<?php echo $paises['id'] ?>" onclick="return confirm('Tem certeza de que deseja remover?');">Remover</a></td>
-
+                    <td><a href="formEditPaises.php?id=<?php echo $paises['id'] ?>">Editar</a></td>
                 </tr>
             <?php endwhile; ?>
         </tbody>
