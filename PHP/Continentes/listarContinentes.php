@@ -23,20 +23,22 @@ $stmt->execute();
         <a class="inicio" href="../../index.html">Inicio</a>
     </div>
 
-    <div class="tabela">
+    <div class="main">
         <table>
             <thead>
                 <tr>
                     <th>ID</th>
                     <th>Nome</th>
+                    <th class="op">Opções</th>
                 </tr>
             </thead>
             <tbody>
                 <?php while ($continentes = $stmt->fetch(PDO::FETCH_ASSOC)): ?>
                     <tr>
-                        <td> <?php echo $continentes['id'] ?> </td>
+                        <td class="id"> <?php echo $continentes['id'] ?> </td>
                         <td> <?php echo $continentes['nome'] ?><td>
-                        <td><a href="deleteContinente.php?id=<?php echo $continentes['id'] ?>" onclick="return confirm('Tem certeza de que deseja remover?');">Remover</a></td>
+                        <a class="opcoes apagar" href="deleteContinente.php?id=<?php echo $continentes['id'] ?>" onclick="return confirm('Tem certeza de que deseja remover?');">Remover</a>
+                        <a class="opcoes editar" href="formEditContinente.php?id=<?php echo $continentes['id'] ?>">Editar</a></
 
                     </tr>
                 <?php endwhile; ?>

@@ -16,7 +16,7 @@ $stmt = $PDO->prepare($sql);
 $stmt->bindParam(':continente_nome', $continente_nome);
 
 if ($stmt->execute()) {
-    echo "Gravado com sucesso";
+    header('Location: ../../mensagem.html');
 } else{
     echo "Erro ao cadastrar";
     print_r($stmt->errorInfo());

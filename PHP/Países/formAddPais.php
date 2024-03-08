@@ -19,24 +19,25 @@
         <a class="inicio" href="../../index.html">Inicio</a>
     </div>
 
-    <div class="tabela">
-        <form action="addPais.php" method="post">
+    <div class="main">
+            <form action="addPais.php" method="post">
 
-            <label for="nome">Nome do Pais</label>
-            <input type="text" name="nome"> <br> <br>
+                <label for="nome">Nome do Pais</label>
+                <input type="text" name="nome"> <br> <br>
 
-            <label for="continente">Continente do País</label>
-            <select type="checkbox" name="continente">
+                <label for="continente">Continente do País</label>
+                <select type="checkbox" name="continente">
 
-            <?php while($paises = $stmt->fetch(PDO::FETCH_ASSOC)):?>
+                <?php while($paises = $stmt->fetch(PDO::FETCH_ASSOC)):?>
 
-                <option value="<?php echo $paises['id'] ?>"><?php echo $paises['nome'] ?></option>
-                
-            <?php endwhile; ?>
-            </select> <br> <br>
+                    <option value="<?php echo $paises['id'] ?>"><?php echo $paises['nome'] ?></option>
+                    
+                <?php endwhile; ?>
+                </select> <br> <br>
 
-            <button type="submit">Enviar</button>
-        </form>
+                <button class="enviar" type="submit">Enviar</button>
+            </form>
     </div>
+    
 </body>
 </html>

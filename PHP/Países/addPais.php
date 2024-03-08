@@ -18,7 +18,7 @@ $stmt->bindParam(':pais_nome', $pais_nome);
 $stmt->bindParam(':continente_nome', $continente_nome);
 
 if ($stmt->execute()) {
-    echo "Gravado com Sucesso";
+    header('Location: ../../mensagem.html');
 } else{
     echo "Erro ao cadastrar";
     print_r($stmt->errorInfo());

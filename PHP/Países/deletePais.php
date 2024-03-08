@@ -12,7 +12,7 @@
     $stmt = $PDO->prepare($sql);
     $stmt->bindParam(':id', $id, PDO::PARAM_INT);
     if ($stmt->execute()) {
-        echo "Removido com sucesso!";
+        header('Location: ../../mensagem.html');
     }
     else {
         echo "Erro ao remover";

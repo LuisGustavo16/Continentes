@@ -21,13 +21,13 @@ $stmt->execute();
         <a class="inicio" href="../../index.html">Inicio</a>
     </div>
 
-    <div class="tabela">
+    <div class="main">
         <form action="addContinente.php" method="post">
 
             <label for="nome">Nome do Continente</label>
             <input type="text" name="nome">
 
-            <button type="submit">Enviar</button>
+            <button class="enviar" type="submit">Enviar</button>
         </form>
     </div>
 
