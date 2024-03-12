@@ -1,7 +1,7 @@
 <?php
 require_once '../init.php';
 $PDO = db_connect();
-$sql = "SELECT id, nome FROM continentes";
+$sql = "SELECT id, nomeContinente FROM continentes";
 $stmt = $PDO->prepare($sql);
 $stmt->execute();
 ?>

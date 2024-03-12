@@ -10,7 +10,7 @@
         exit;
     }
     $PDO = db_connect();
-    $sql = "UPDATE paises SET nome = :nome WHERE id = :id";
+    $sql = "UPDATE paises SET nomePais = :nome WHERE id = :id";
     $stmt = $PDO->prepare($sql);
     $stmt->bindParam(':nome', $nome);
     $stmt->bindParam(':id', $id, PDO::PARAM_INT);

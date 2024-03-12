@@ -12,7 +12,7 @@ if (empty($pais_nome) || empty($continente_nome)) {
 
 // insere no banco
 $PDO = db_connect();
-$sql = "INSERT INTO paises(nome, id_continente) VALUES(:pais_nome, :continente_nome)";
+$sql = "INSERT INTO paises(nomePais, id_continente) VALUES(:pais_nome, :continente_nome)";
 $stmt = $PDO->prepare($sql);
 $stmt->bindParam(':pais_nome', $pais_nome);
 $stmt->bindParam(':continente_nome', $continente_nome);

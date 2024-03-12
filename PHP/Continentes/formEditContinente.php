@@ -7,7 +7,7 @@
         exit;
     }
     $PDO = db_connect();
-    $sql = "SELECT id, nome FROM continentes WHERE id = :id";
+    $sql = "SELECT id, nomeContinente FROM continentes WHERE id = :id";
     $stmt = $PDO->prepare($sql);
     $stmt->bindParam(':id', $id, PDO::PARAM_INT);
     $stmt->execute();
@@ -37,7 +37,7 @@
     <div class="main">
         <form action="editContinente.php" method="post">
             <label for="nome">Nome: </label>
-            <input type="text" name="nome" id="nome" value="<?php echo $pais['nome'] ?>">
+            <input type="text" name="nome" id="nome" value="<?php echo $pais['nomeContinente'] ?>">
             <input type="hidden" name="id" value="<?php echo $id ?>">
             
             <button class="enviar" type="submit">Enviar</button>

@@ -10,7 +10,7 @@
         exit;
     }
     $PDO = db_connect();
-    $sql = "UPDATE continentes SET nome = :nome WHERE id = :id";
+    $sql = "UPDATE continentes SET nomeContinente = :nome WHERE id = :id";
     $stmt = $PDO->prepare($sql);
     $stmt->bindParam(':nome', $nome);
     $stmt->bindParam(':id', $id, PDO::PARAM_INT);

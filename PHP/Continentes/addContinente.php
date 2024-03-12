@@ -11,7 +11,7 @@ if (empty($continente_nome)) {
 
 // insere no banco
 $PDO = db_connect();
-$sql = "INSERT INTO continentes(nome) VALUES(:continente_nome)";
+$sql = "INSERT INTO continentes(nomeContinente) VALUES(:continente_nome)";
 $stmt = $PDO->prepare($sql);
 $stmt->bindParam(':continente_nome', $continente_nome);
 

@@ -2,7 +2,7 @@
 require '../init.php';
 $PDO = db_connect();
 
-$sql = "SELECT C.id, C.nome from continentes as C";
+$sql = "SELECT C.id, C.nomeContinente from continentes as C";
 
 $stmt = $PDO->prepare($sql);
 $stmt->execute();
@@ -36,7 +36,7 @@ $stmt->execute();
                 <?php while ($continentes = $stmt->fetch(PDO::FETCH_ASSOC)): ?>
                     <tr>
                         <td class="id"> <?php echo $continentes['id'] ?> </td>
-                        <td> <?php echo $continentes['nome'] ?><td>
+                        <td> <?php echo $continentes['nomeContinente'] ?><td>
                         <a class="opcoes apagar" href="deleteContinente.php?id=<?php echo $continentes['id'] ?>" onclick="return confirm('Tem certeza de que deseja remover?');">Remover</a>
                         <a class="opcoes editar" href="formEditContinente.php?id=<?php echo $continentes['id'] ?>">Editar</a></
 

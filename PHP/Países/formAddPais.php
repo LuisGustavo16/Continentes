@@ -1,7 +1,7 @@
 <?php
     require_once '../init.php';
     $PDO = db_connect();
-    $sql = "SELECT id, nome FROM continentes";
+    $sql = "SELECT id, nomeContinente FROM continentes";
     $stmt = $PDO->prepare($sql);
     $stmt->execute();
 ?>
@@ -30,7 +30,7 @@
 
                 <?php while($paises = $stmt->fetch(PDO::FETCH_ASSOC)):?>
 
-                    <option value="<?php echo $paises['id'] ?>"><?php echo $paises['nome'] ?></option>
+                    <option value="<?php echo $paises['id'] ?>"><?php echo $paises['nomeContinente'] ?></option>
                     
                 <?php endwhile; ?>
                 </select> <br> <br>

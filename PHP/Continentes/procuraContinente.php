@@ -8,7 +8,7 @@
     }
     $pesquisa = '%' . $nome . '%';
     $PDO = db_connect();
-    $sql = "SELECT id, nome FROM continentes WHERE upper(nome) like :nome";
+    $sql = "SELECT id, nomeContinente FROM continentes WHERE upper(nomeContinente) like :nome";
     $stmt = $PDO->prepare($sql);
     $stmt->execute([':nome' => $pesquisa]);
 ?>
@@ -40,7 +40,7 @@
                 <?php while ($continente = $stmt->fetch(PDO::FETCH_ASSOC)): ?>
                     <tr>
                         <td><?php echo $continente['id'] ?></td>
-                        <td><?php echo $continente['nome'] ?></td>
+                        <td><?php echo $continente['nomeContinente'] ?></td>
                         <td>
                             <a class="opcoes apagar" href="deleteContinente.php?id=<?php echo $continente['id'] ?>" onclick="return confirm('Tem certeza de que deseja remover?');">Remover</a>
                             <a class="opcoes editar" href="formEditContinente.php?id=<?php echo $continente['id'] ?>">Editar</a>
